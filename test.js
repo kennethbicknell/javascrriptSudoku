@@ -1,13 +1,13 @@
 var test = [
-    [1,2,3,4,5,0,7,8,9],
-    [4,0,6,7,8,9,1,2,3],
-    [7,8,9,1,2,3,4,5,6],
-    [2,3,4,5,6,7,8,9,1],
-    [5,6,7,8,9,1,2,3,4],
-    [8,9,1,2,3,4,5,6,7],
-    [3,4,5,6,7,8,9,1,2],
-    [6,7,8,9,1,2,3,4,5],
-    [9,1,2,3,4,5,6,7,0],
+    [0,0,0,0,0,0,0,0,0],
+    [0,0,0,0,0,0,0,0,0],
+    [0,0,0,0,0,0,0,0,0],
+    [0,0,0,0,0,0,0,0,0],
+    [0,0,0,0,0,0,0,0,0],
+    [0,0,0,0,0,0,0,0,0],
+    [0,0,0,0,0,0,0,0,0],
+    [0,0,0,0,0,0,0,0,0],
+    [0,0,0,0,0,0,0,0,0]
 ];
 
 function findNextEmpty(grid){
@@ -83,15 +83,15 @@ function displaySudokuHTML(grid){
     }
     var div = document.createElement("div");
     div.innerHTML = arrayAsString;
-    document.body.append(div);
+    //document.body.append(div);
 
-    console.log();
+    console.log(arrayAsString);
 }
 
-displaySudokuHTML(test);
+//displaySudokuHTML(test);
 var start = findNextEmpty(test);
 if(solveGrid(test, start[0], start[1])){
-    console.log(test);
+    displaySudokuHTML(test);
 }else {
     console.log("nope");
 }
