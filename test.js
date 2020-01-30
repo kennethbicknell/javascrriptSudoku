@@ -81,9 +81,9 @@ function displaySudokuHTML(grid){
         }
         arrayAsString += "\n";
     }
-    var div = document.createElement("div");
-    div.innerHTML = arrayAsString;
-    //document.body.append(div);
+    var para = document.createElement("P");
+    para.innerText = arrayAsString;
+    document.body.appendChild(para);
 
     console.log(arrayAsString);
 }
